@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+    <children>
+      <ListView id="yourDir" fx:id="yourDir" layoutX="20.0" layoutY="32.0" prefHeight="330.0" prefWidth="250.0" AnchorPane.leftAnchor="20.0" />
+      <Text layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Maps" />
+      <Text layoutX="285.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Maps" AnchorPane.leftAnchor="285.0" />
+      <TextField fx:id="textUser" layoutX="451.0" layoutY="384.0" AnchorPane.rightAnchor="20.0" />
+      <Text layoutX="334.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input your username:" />
+      <TextField fx:id="textDirectory" editable="false" layoutX="20.0" layoutY="384.0" prefHeight="25.0" prefWidth="193.0" />
+      <Button layoutX="216.0" layoutY="384.0" mnemonicParsing="false" onAction="#chooseDir" text="Choose Directory" />
+      <Circle fx:id="shapeOnline" fill="#ff0606" layoutX="592.0" layoutY="16.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="20.0" />
+      <TableView fx:id="serverTable" layoutX="287.0" layoutY="32.0" prefHeight="330.0" prefWidth="314.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="mapName" prefWidth="104.0" text="Map Name" />
+          <TableColumn fx:id="author" prefWidth="104.0" text="Created By" />
+          <TableColumn fx:id="date" prefWidth="103.0" text="Date" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
